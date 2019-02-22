@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Route } from 'react-router-dom';
 
 import './App.css';
+import Projects from './components/Projects';
 
 class App extends Component {
   constructor() {
@@ -35,7 +36,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>It's working!</h1>
+        <Route
+          path='/projects'
+          render={props =>
+            <Projects
+              {...props}
+              projects={this.state.projects}
+            />
+          }
+        />
       </div>
     );
   }
