@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Action from './Action';
+
 const Actions = props => {
     return (
         <div>
