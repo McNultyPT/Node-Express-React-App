@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Project from './Project';
+
 const Projects = props => {
     return (
         <div>
@@ -7,7 +9,8 @@ const Projects = props => {
                return (
                    <Project
                        name={project.name}
-                       description={project.description} 
+                       description={project.description}
+                       key={project.id} 
                    />
                );
            })} 
