@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom';
 
 import './App.css';
 import Projects from './components/Projects';
+import Actions from './components/Actions';
 
 class App extends Component {
   constructor() {
@@ -42,6 +43,16 @@ class App extends Component {
             <Projects
               {...props}
               projects={this.state.projects}
+            />
+          }
+        />
+
+        <Route
+          path='/actions'
+          render={props => 
+            <Actions
+              {...props}
+              actions={this.state.actions}
             />
           }
         />
